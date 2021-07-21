@@ -1,9 +1,9 @@
 # Bitcoin Wallet Bot
 
 ## :package: Features
-create wallet and address
-transfer
-check coin rate
+create wallet and address<br>
+transfer<br>
+check coin rate<br>
 
 ## :arrow_down: Installation
 8 STEP

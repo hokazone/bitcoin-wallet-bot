@@ -1,0 +1,4 @@
+Flask==2.0.1
+line-bot-sdk==1.19.0
+psycopg2-binary==2.9.1
+bitcoinlib==0.5.3

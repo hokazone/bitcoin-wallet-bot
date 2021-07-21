@@ -1,0 +1,370 @@
+{
+    "create": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-80px",
+                    "margin": "none"
+                },
+                {
+                    "type": "text",
+                    "text": "ウォレット作成",
+                    "size": "xl",
+                    "color": "#000000",
+                    "align": "center",
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
+                }
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
+        },
+        "hero": {
+            "type": "image",
+            "url": "https://assets-coincheck.s3.amazonaws.com/uploads/article/image/file/82859a28-e266-4cca-bd76-76e8dd43080b.jpeg",
+            "size": "full",
+            "aspectRatio": "1.51:1",
+            "aspectMode": "fit"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "Bitcoinウォレットを作成します。",
+                    "align": "center",
+                    "contents": []
+                }
+            ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
+                        "label": "作成",
+                        "text": "#create"
+                    },
+                    "color": "#00B900",
+                    "style": "primary"
+                }
+            ]
+        }
+    },
+    "create_success": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-52px",
+                    "margin": "none"
+                },
+                {
+                    "type": "text",
+                    "text": "Success",
+                    "size": "xl",
+                    "color": "#000000",
+                    "align": "center",
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
+                }
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "Bitcoinウォレットを作成しました！",
+                    "align": "center",
+                    "contents": []
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5",
+                            "wrap": true,
+                            "size": "18px",
+                            "weight": "bold",
+                            "align": "start",
+                            "contents": [],
+                            "offsetTop": "5px"
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://cdn.icon-icons.com/icons2/1875/PNG/512/copy_120015.png",
+                            "size": "40px",
+                            "offsetTop": "-35px",
+                            "offsetStart": "125px",
+                            "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "https://liff.line.me/1656129059-zZA6Q0Jm"
+                            }
+                        }
+                    ],
+                    "backgroundColor": "#d3d3d3",
+                    "cornerRadius": "7px",
+                    "margin": "15px",
+                    "paddingAll": "5px",
+                    "borderWidth": "none",
+                    "paddingEnd": "65px",
+                    "height": "70px",
+                    "paddingStart": "15px"
+                }
+            ]
+        },
+        "styles": {
+            "body": {
+                "separator": true
+            }
+        }
+    },
+    "transfer": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "Header",
+                    "align": "center",
+                    "contents": []
+                }
+            ]
+        },
+        "hero": {
+            "type": "image",
+            "url": "https://assets-coincheck.s3.amazonaws.com/uploads/article/image/file/82859a28-e266-4cca-bd76-76e8dd43080b.jpeg",
+            "size": "full",
+            "aspectRatio": "1.51:1",
+            "aspectMode": "fit"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "Body",
+                    "align": "center",
+                    "contents": []
+                }
+            ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "uri",
+                        "label": "Button",
+                        "uri": "https://linecorp.com"
+                    }
+                }
+            ]
+        }
+    },
+    "management": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-80px",
+                    "margin": "none"
+                },
+                {
+                    "type": "text",
+                    "text": "ウォレット管理",
+                    "size": "xl",
+                    "color": "#000000",
+                    "align": "center",
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
+                }
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
+                        "label": "残高照会",
+                        "text": "#balance"
+                    },
+                    "color": "#00b900",
+                    "style": "primary"
+                },
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
+                        "label": "取引履歴",
+                        "text": "#history"
+                    },
+                    "color": "#00b900",
+                    "style": "primary",
+                    "offsetTop": "15px"
+                },
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
+                        "label": "お問い合わせ",
+                        "text": "#contact"
+                    },
+                    "color": "#00b900",
+                    "style": "primary",
+                    "offsetTop": "30px"
+                },
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
+                        "label": "ウォレット削除",
+                        "text": "#delete"
+                    },
+                    "color": "#ff0000",
+                    "style": "primary",
+                    "offsetTop": "45px"
+                }
+            ],
+            "paddingBottom": "70px"
+        },
+        "styles": {
+            "header": {
+                "separator": false
+            },
+            "body": {
+                "separator": true
+            }
+        }
+    },
+    "address_check": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-52px",
+                    "margin": "none"
+                },
+                {
+                    "type": "text",
+                    "text": "Success",
+                    "size": "xl",
+                    "color": "#000000",
+                    "align": "center",
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
+                }
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "あなたのBitcoinアドレスはこちらです！",
+                    "align": "center",
+                    "contents": []
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5",
+                            "wrap": true,
+                            "size": "18px",
+                            "weight": "bold",
+                            "align": "start",
+                            "contents": [],
+                            "offsetTop": "5px"
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://cdn.icon-icons.com/icons2/1875/PNG/512/copy_120015.png",
+                            "size": "40px",
+                            "offsetTop": "-35px",
+                            "offsetStart": "125px",
+                            "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "https://liff.line.me/1656129059-zZA6Q0Jm"
+                            }
+                        }
+                    ],
+                    "backgroundColor": "#d3d3d3",
+                    "cornerRadius": "7px",
+                    "margin": "15px",
+                    "paddingAll": "5px",
+                    "borderWidth": "none",
+                    "paddingEnd": "65px",
+                    "height": "70px",
+                    "paddingStart": "15px"
+                }
+            ]
+        },
+        "styles": {
+            "body": {
+                "separator": true
+            }
+        }
+    }
+}

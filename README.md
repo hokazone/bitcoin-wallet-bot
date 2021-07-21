@@ -12,6 +12,6 @@
 8. enjoy!
 
 ## Todo
-:ballot_box_with_check:add transfer method
-:ballot_box_with_check:improvement copy address method
-:ballot_box_with_check:management with postgreSQL
+:ballot_box_with_check:add transfer method<br>
+:ballot_box_with_check:improvement copy address method<br>
+:ballot_box_with_check:management with postgreSQL<br>

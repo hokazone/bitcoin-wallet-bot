@@ -44,12 +44,6 @@ def callback():
     return "OK"
 
 
-@app.route("/database")
-def database():
-    with open("data.json", "r") as f:
-        return f.read()
-
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     mes = event.message.text
@@ -138,15 +132,13 @@ def handle_message(event):
 
     if mes == "#delete":
         if db.deleteAddressInDatabase(uid) and ad.deleteAddress(uid) is True:
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text="success!")
-            )
+            text = "success"
         else:
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text="error!")
-            )
+            text = "no data!"
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=text)
+        )
 
 
 if __name__ == "__main__":

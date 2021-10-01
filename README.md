@@ -10,8 +10,3 @@
 6. setting heroku config
 7. deploy forked repository
 8. enjoy!
-
-## Todo
-:ballot_box_with_check:add transfer method
-:ballot_box_with_check:improvement copy address method
-:ballot_box_with_check:management with postgreSQL

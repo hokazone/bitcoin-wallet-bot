@@ -10,6 +10,7 @@ from linebot.models import (FlexSendMessage, MessageEvent, TextMessage,
 
 import os
 import json
+import requests as req
 
 
 app = Flask(__name__)
@@ -66,20 +67,20 @@ def handle_message(event):
         )
 
     if mes == "#create":
-        if db.searchIdsByDatabase(uid) is True:
+        if db.id_exists(uid) is True:
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage("already created!")
+                TextSendMessage("既に作成されています！\n[ #address ]コマンドで確認してください。")
             )
         else:
-            address = ad.createAddress(uid)
+            address = ad.create_address(uid)
             (container["create_success"]["body"]["contents"]
                 [1]["contents"][0]["text"]) = address
             host = "https://liff.line.me/1656129059-zZA6Q0Jm/"
             uri = f"{host}?id={uid}#URL-flagment"
             (container["create_success"]["body"]["contents"]
                 [1]["contents"][1]["action"]["uri"]) = uri
-            db.insertToDatabase(uid, address, event.timestamp)
+            db.add_new_wallet(uid, address, event.timestamp)
             line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage(
@@ -89,7 +90,7 @@ def handle_message(event):
             )
 
 # ===============Transfer================
-    if mes == "送金・受金":
+    if mes == "送金":
         line_bot_api.reply_message(
             event.reply_token,
             FlexSendMessage(
@@ -97,6 +98,23 @@ def handle_message(event):
                 contents=container["transfer"]
             )
         )
+
+    if mes.startswith("#send:") is True:
+        # sample format: [ #send:{address}:{amount} ]
+        try:
+            mes = mes.split(":")
+            if db.id_exists(uid):
+                ad.send_coin(uid, mes[1], mes[2])
+                line_bot_api.reply_message(
+                    event.reply_token,
+                    TextSendMessage(text="送金に成功しました！")
+                )
+        except Exception:
+            print(Exception)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text="送金に失敗しました。")
+            )
 
 # ===============Management================
     if mes == "ウォレット管理":
@@ -109,7 +127,7 @@ def handle_message(event):
         )
 
     if mes == "#address":
-        address = db.searchAddressByDatabase(uid)
+        address = db.get_address(uid)
         if address != "nodata":
             (container["address_check"]["body"]["contents"]
                 [1]["contents"][0]["text"]) = address
@@ -130,11 +148,58 @@ def handle_message(event):
                 TextSendMessage(text="no data!")
             )
 
+    if mes == "#balance":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="データを取得中です...")
+        )
+        if db.id_exists(uid) is True:
+            try:
+                balance = ad.scan_wallet(uid)
+                balance_name = balance[0]
+                balance_value = balance[1]
+                print(balance_name)
+                print(balance_value)
+                # 通貨名
+                (container["balance"]["body"]["contents"][0]["text"]
+                 ) = f"通貨名： {balance_name}"
+                # 残高
+                (container["balance"]["body"]["contents"][1]["text"]
+                 ) = f"残高　： {balance_value}"
+                # USD
+                to_usd_rate = req.get(
+                    "https://blockchain.info/ticker").json()["USD"]
+                rate = 'レート： 1 BTC -> {} {}'.format(
+                    to_usd_rate["15m"], to_usd_rate["symbol"])
+                (container["balance"]["body"]["contents"][2]["text"]) = rate
+                line_bot_api.push_message(
+                    event.source.user_id,
+                    FlexSendMessage(
+                        alt_text="balance",
+                        contents=container["balance"]
+                    )
+                )
+            except IndexError as e:
+                print(f"Catch IndexError: {e}")
+                line_bot_api.push_message(
+                    event.source.user_id,
+                    TextSendMessage(text="取引履歴・残高はありません。")
+                )
+
+    if mes == "#contact":
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(
+                alt_text="contact",
+                contents=container["contact"]
+            )
+        )
+
     if mes == "#delete":
-        if db.deleteAddressInDatabase(uid) and ad.deleteAddress(uid) is True:
-            text = "success"
+        if db.delete_wallet(uid) and ad.delete_address(uid) is True:
+            text = "ウォレットを削除しました。"
         else:
-            text = "no data!"
+            text = "ウォレットがありません。"
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=text)

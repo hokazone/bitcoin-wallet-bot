@@ -111,17 +111,18 @@
                             "type": "text",
                             "text": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5",
                             "wrap": true,
-                            "size": "18px",
+                            "size": "16px",
                             "weight": "bold",
                             "align": "start",
                             "contents": [],
-                            "offsetTop": "5px"
+                            "offsetTop": "8px",
+                            "offsetStart": "4px"
                         },
                         {
                             "type": "image",
                             "url": "https://cdn.icon-icons.com/icons2/1875/PNG/512/copy_120015.png",
                             "size": "40px",
-                            "offsetTop": "-35px",
+                            "offsetTop": "-28px",
                             "offsetStart": "125px",
                             "action": {
                                 "type": "uri",
@@ -155,19 +156,26 @@
             "layout": "vertical",
             "contents": [
                 {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-52px",
+                    "margin": "none"
+                },
+                {
                     "type": "text",
-                    "text": "Header",
+                    "text": "送金",
+                    "size": "xl",
+                    "color": "#000000",
                     "align": "center",
-                    "contents": []
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
                 }
-            ]
-        },
-        "hero": {
-            "type": "image",
-            "url": "https://assets-coincheck.s3.amazonaws.com/uploads/article/image/file/82859a28-e266-4cca-bd76-76e8dd43080b.jpeg",
-            "size": "full",
-            "aspectRatio": "1.51:1",
-            "aspectMode": "fit"
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
         },
         "body": {
             "type": "box",
@@ -175,25 +183,46 @@
             "contents": [
                 {
                     "type": "text",
-                    "text": "Body",
-                    "align": "center",
+                    "text": "送金するにあたって",
+                    "align": "start",
                     "contents": []
-                }
-            ]
-        },
-        "footer": {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
+                },
                 {
-                    "type": "button",
-                    "action": {
-                        "type": "uri",
-                        "label": "Button",
-                        "uri": "https://linecorp.com"
-                    }
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "#send:{address}:{amount}",
+                            "wrap": true,
+                            "size": "13px",
+                            "align": "center",
+                            "offsetStart": "20px",
+                            "weight": "bold"
+                        }
+                    ],
+                    "backgroundColor": "#d3d3d3",
+                    "cornerRadius": "7px",
+                    "margin": "15px",
+                    "paddingAll": "5px",
+                    "borderWidth": "none",
+                    "paddingEnd": "65px",
+                    "height": "40px",
+                    "paddingStart": "15px",
+                    "justifyContent": "center",
+                    "alignItems": "center"
+                },
+                {
+                    "type": "text",
+                    "text": "以上のフォーマットでメッセージを送信してください。",
+                    "align": "start",
+                    "contents": [],
+                    "wrap": true,
+                    "offsetTop": "15px",
+                    "weight": "regular"
                 }
-            ]
+            ],
+            "height": "170px"
         }
     },
     "management": {
@@ -233,11 +262,22 @@
                     "type": "button",
                     "action": {
                         "type": "message",
+                        "label": "アドレス確認",
+                        "text": "#address"
+                    },
+                    "color": "#00b900",
+                    "style": "primary"
+                },
+                {
+                    "type": "button",
+                    "action": {
+                        "type": "message",
                         "label": "残高照会",
                         "text": "#balance"
                     },
                     "color": "#00b900",
-                    "style": "primary"
+                    "style": "primary",
+                    "offsetTop": "15px"
                 },
                 {
                     "type": "button",
@@ -248,7 +288,7 @@
                     },
                     "color": "#00b900",
                     "style": "primary",
-                    "offsetTop": "15px"
+                    "offsetTop": "30px"
                 },
                 {
                     "type": "button",
@@ -259,7 +299,7 @@
                     },
                     "color": "#00b900",
                     "style": "primary",
-                    "offsetTop": "30px"
+                    "offsetTop": "45px"
                 },
                 {
                     "type": "button",
@@ -270,10 +310,10 @@
                     },
                     "color": "#ff0000",
                     "style": "primary",
-                    "offsetTop": "45px"
+                    "offsetTop": "60px"
                 }
             ],
-            "paddingBottom": "70px"
+            "paddingBottom": "80px"
         },
         "styles": {
             "header": {
@@ -319,7 +359,7 @@
             "contents": [
                 {
                     "type": "text",
-                    "text": "あなたのBitcoinアドレスはこちらです！",
+                    "text": "Bitcoinアドレスはこちらです！",
                     "align": "center",
                     "contents": []
                 },
@@ -331,17 +371,18 @@
                             "type": "text",
                             "text": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5",
                             "wrap": true,
-                            "size": "18px",
+                            "size": "16px",
                             "weight": "bold",
                             "align": "start",
                             "contents": [],
-                            "offsetTop": "5px"
+                            "offsetTop": "8px",
+                            "offsetStart": "4px"
                         },
                         {
                             "type": "image",
                             "url": "https://cdn.icon-icons.com/icons2/1875/PNG/512/copy_120015.png",
                             "size": "40px",
-                            "offsetTop": "-35px",
+                            "offsetTop": "-28px",
                             "offsetStart": "125px",
                             "action": {
                                 "type": "uri",
@@ -366,5 +407,255 @@
                 "separator": true
             }
         }
+    },
+    "balance": {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "image",
+                    "url": "https://pngimg.com/uploads/bitcoin/bitcoin_PNG48.png",
+                    "size": "35px",
+                    "offsetTop": "32px",
+                    "offsetStart": "-52px",
+                    "margin": "none"
+                },
+                {
+                    "type": "text",
+                    "text": "残高照会",
+                    "size": "xl",
+                    "color": "#000000",
+                    "align": "center",
+                    "contents": [],
+                    "offsetStart": "16px",
+                    "weight": "bold"
+                }
+            ],
+            "paddingAll": "0px",
+            "offsetTop": "-15px"
+        },
+        "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "通貨名",
+                    "align": "start",
+                    "contents": []
+                },
+                {
+                    "type": "text",
+                    "text": "残高",
+                    "align": "start",
+                    "contents": []
+                },
+                {
+                    "type": "text",
+                    "text": "USD",
+                    "align": "start",
+                    "contents": []
+                }
+            ]
+        },
+        "styles": {
+            "body": {
+                "separator": true
+            }
+        }
+    },
+    "contact": {
+        "type": "carousel",
+        "contents": [
+            {
+                "type": "bubble",
+                "header": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://i.ibb.co/Wfgy8C8/kisspng-computer-icons-envelope-g-mail-5b2f26c49cfe35-4054597715298167726431.png",
+                            "size": "35px",
+                            "offsetTop": "32px",
+                            "offsetStart": "-52px",
+                            "margin": "none"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Mail",
+                            "size": "xl",
+                            "color": "#000000",
+                            "align": "center",
+                            "contents": [],
+                            "offsetStart": "16px",
+                            "weight": "bold"
+                        }
+                    ],
+                    "paddingAll": "0px",
+                    "offsetTop": "-15px"
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://i.ibb.co/FxzBtwb/mailbox-mailbox.jpg",
+                            "aspectMode": "cover",
+                            "size": "200px"
+                        }
+                    ]
+                },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "action": {
+                                "type": "uri",
+                                "label": "Access",
+                                "uri": "mailto:kd1304073@st.kobedenshi.ac.jp"
+                            },
+                            "color": "#00b900",
+                            "style": "primary"
+                        }
+                    ]
+                },
+                "styles": {
+                    "body": {
+                        "separator": true
+                    }
+                }
+            },
+            {
+                "type": "bubble",
+                "header": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png",
+                            "size": "35px",
+                            "offsetTop": "32px",
+                            "offsetStart": "-52px",
+                            "margin": "none"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Twitter",
+                            "size": "xl",
+                            "color": "#000000",
+                            "align": "center",
+                            "contents": [],
+                            "offsetStart": "16px",
+                            "weight": "bold"
+                        }
+                    ],
+                    "paddingAll": "0px",
+                    "offsetTop": "-15px"
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://pbs.twimg.com/profile_images/1430719823990849539/ttzrQ-Hv_400x400.jpg",
+                            "aspectMode": "cover",
+                            "size": "200px"
+                        }
+                    ]
+                },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "action": {
+                                "type": "uri",
+                                "label": "Access",
+                                "uri": "https://twitter.com/s_1see"
+                            },
+                            "color": "#00b900",
+                            "style": "primary"
+                        }
+                    ]
+                },
+                "styles": {
+                    "body": {
+                        "separator": true
+                    }
+                }
+            },
+            {
+                "type": "bubble",
+                "header": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://cdn.icon-icons.com/icons2/936/PNG/512/github-logo_icon-icons.com_73546.png",
+                            "size": "35px",
+                            "offsetTop": "32px",
+                            "offsetStart": "-52px",
+                            "margin": "none"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Github",
+                            "size": "xl",
+                            "color": "#000000",
+                            "align": "center",
+                            "contents": [],
+                            "offsetStart": "16px",
+                            "weight": "bold"
+                        }
+                    ],
+                    "paddingAll": "0px",
+                    "offsetTop": "-15px"
+                },
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://avatars.githubusercontent.com/u/82143008?v=4",
+                            "aspectMode": "cover",
+                            "size": "200px"
+                        }
+                    ]
+                },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "action": {
+                                "type": "uri",
+                                "label": "Access",
+                                "uri": "https://github.com/s1see/bitcoin-wallet-bot"
+                            },
+                            "color": "#00b900",
+                            "style": "primary"
+                        }
+                    ]
+                },
+                "styles": {
+                    "body": {
+                        "separator": true
+                    }
+                }
+            }
+        ]
     }
 }
